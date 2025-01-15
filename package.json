@@ -1,0 +1,23 @@
+{
+  "name": "ppe-ia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marc-HamChouChong/PPE-IA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marc-HamChouChong/PPE-IA/issues"
+  },
+  "homepage": "https://github.com/Marc-HamChouChong/PPE-IA#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
