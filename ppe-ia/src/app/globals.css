@@ -18,10 +18,16 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
   color: var(--text-color1);
 }
 
 html {
   background-color: var(--color5);
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
