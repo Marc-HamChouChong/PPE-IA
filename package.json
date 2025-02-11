@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "concurrently \"cd backend && bash -c 'source venv/bin/activate && uvicorn main:app --reload --host 0.0.0.0 --port 8000'\" \"cd frontend && npm run dev\""
-
+    "start": "concurrently \"cd backend && bash -c 'source venv/bin/activate && uvicorn main:app --reload --host 0.0.0.0 --port 8000'\" \"cd frontend && npm run dev\"",
+    "backend": "bash -c 'cd backend && source venv/bin/activate && uvicorn main:app --reload --host 0.0.0.0 --port 8000'",
+    "frontend": "cd frontend && npm run dev"
   },
   "repository": {
     "type": "git",
