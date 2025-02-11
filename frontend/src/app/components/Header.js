@@ -18,24 +18,24 @@ export default function Header() {
       </div>
       <div className="flex justify-center gap-16 mb-6">
         <Link
-          href="/pages/url"
-          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110"
-          style={{ backgroundColor: "var(--color2)" }}
-        >URL
-        </Link>
-        <Link
           href="/pages/text"
           className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110"
           style={{ backgroundColor: "var(--color2)" }}
         >Text
         </Link>
-        <Link
+        <span
+          href="/pages/url"
+          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110 opacity-60"
+          style={{ backgroundColor: "var(--color2)" }}
+        >URL
+        </span>
+        <span
           href="/pages/file"
-          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110"
+          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110 opacity-60"
           style={{ backgroundColor: "var(--color2)" }}
         >File
-        </Link>
-        </div>
+        </span>
+      </div>
     </header>
   );
 }
