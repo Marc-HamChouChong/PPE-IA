@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from process import process_text
+from process import *
 
 app = FastAPI()
 
@@ -20,6 +20,14 @@ class TextInput(BaseModel):
 @app.post("/process-text")
 def process_text_route(data: TextInput):
     return process_text(data.text)
+
+@app.post("/categories")
+def categories_route(data: TextInput):
+    return get_categories(data.text)
+
+@app.post("/translation")
+def translation_route(data: TextInput):
+    return get_translation(data.text)
 
 if __name__ == "__main__":
     import uvicorn
