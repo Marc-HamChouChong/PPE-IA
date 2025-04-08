@@ -6,17 +6,8 @@ def summarize(texte: str) -> str:
     model_name = "facebook/bart-large-cnn"
     summarizer = pipeline("summarization", model = model_name)
 
-    article = """Flanked by Donald Trump in the Oval Office this week, Elon Musk claimed his much-vaunted, but ill-defined, “department of government efficiency” (Doge) was providing “maximum transparency” on its blitz through the federal government.
-    Its official website was empty, however – until Wednesday, when it added elements including data from a controversial rightwing thinktank recently sued by a climate scientist.
-    New elements include Doge’s feed from X, Musk’s social network, and a blank section for savings identified by the agency, promised to be updated “no later than” Valentine’s Day.
-    news microphones"""
-
     summary = summarizer(texte, max_length=130, min_length=30, do_sample=False)
     return summary[0]['summary_text']
-
-def supprimer_espaces(texte: str) -> str:
-    """Supprime les espaces d'un texte donné."""
-    return texte.replace(" ", "")
 
 category_labels = ['sport', 'environment', 'politics', 'science', 'health', 'economy', 'miscellaneous', 'people', 'culture']
 

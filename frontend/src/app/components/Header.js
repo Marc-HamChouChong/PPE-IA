@@ -25,13 +25,13 @@ export default function Header() {
         </Link>
         <span
           href="/pages/url"
-          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110 opacity-60"
+          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-100"
           style={{ backgroundColor: "var(--color2)" }}
         >URL
         </span>
         <span
           href="/pages/file"
-          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-110 opacity-60"
+          className="font-semibold py-2 px-16 rounded-lg transition-transform transform hover:scale-100"
           style={{ backgroundColor: "var(--color2)" }}
         >File
         </span>

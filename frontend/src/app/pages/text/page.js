@@ -83,13 +83,25 @@ export default function Page() {
 
 
       {isProcessing ? (
-          <div> Processing... </div>
+        <div className="flex items-center space-x-2">
+          <svg className="animate-spin h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+          <div>Processing... </div>
+        </div>
         ) : (
           <div>
             {outputText && (
               <div>
                 {isCategoring ? (
-                  <div> Categoring... </div>
+                  <div className="flex items-center space-x-2">
+                    <svg className="animate-spin h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                    <div>Categoring...</div>
+                  </div>
                   ) : (
                   <div className="flex flex-wrap gap-2 my-2">
                     {categories.map((category, index) => (
@@ -122,7 +134,13 @@ export default function Page() {
                 </button>
                 
                 {isTranslating ? ( 
-                  <div> Translating... </div>
+                  <div className="flex items-center space-x-2">
+                    <svg className="animate-spin h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                    <div>Translating... </div>
+                  </div>
                   ) : (
                     <div>
                       { translateText && (
